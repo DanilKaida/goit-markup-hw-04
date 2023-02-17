@@ -155,7 +155,13 @@ margin-left: auto;
 /* -----------------------------------HERO */
 
 .hero{
-background-color: var(--hero-footer-color);
+  background-color: var(--hero-footer-color);
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), 
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px;
 }
 
 .hero-container{
@@ -217,6 +223,18 @@ background-color: var(--hero-footer-color);
   display: flex;
   flex-direction: column;
   width: 264px;
+}
+.feature{
+height: 112px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--second-background-color);
+margin-bottom: 8px;
+}
+
+.feature-icon{
+fill: #2e2f42; 
 }
 
 .features-subtitle {
@@ -285,12 +303,14 @@ background-color: var(--second-background-color);
   flex-direction: column;
   align-items:center;
   background-color: var(--main-background-color);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+  0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+  0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
 
 .card-info{
   display: block;
   text-align: center;
-  width: 232px;
   padding: 32px 16px;
   }
 
@@ -307,6 +327,81 @@ background-color: var(--second-background-color);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--main-button-color);
+}
+
+.team-soc-icon{
+fill: #f4f4fd;
+}
+
+.team-soc-link:is(:hover, :focus) {
+  background-color: var(--hover-focus-color);
+}
+/* --------------------------------CUSTOMERS*/
+.customers {
+  background-color: var(--main-background-color);
+}
+
+.customers-container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;  
+}
+
+.customers-title {
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customer-item {
+  width: 168px;
+  height: 88px;
+  background-color: var(--second-background-color);
+  }
+
+.customer-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8E8F99;
+  border-radius: 4px;
+  color: #8E8F99;
+  }
+
+.customer-icon {
+ fill: currentColor;
+}
+
+.customer-link:is(:hover, :focus) {
+  color: var(--hover-focus-color);
+  border-color: var(--hover-focus-color);
 }
 
 /* ------------------------------FOOTER */
@@ -346,10 +441,54 @@ padding-bottom: 100px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  display: flex;
   color: #e7e9fc;
   width: 264px;
 }
+
+.footer-soc {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 130px;
+  margin-left: 120px;
+}
+.soc-text {
+  display: block;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 16px;  
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #8E8F99;
+}
+.footer-soc-icon{
+  fill: #f4f4fd;
+}
+.footer-soc-link:is(:hover, :focus) {
+  background-color: #31D0AA;
+}
+
 /* ---------------------------------PORTFOLIO -- */
 .portfolio{
   background-color: var(--main-background-color);
@@ -386,9 +525,12 @@ padding-bottom: 100px;
 .portfolio-btn:is(:hover, :focus) {
   color: #FFFFFF;
   background-color: #404BBF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+  0px 2px 1px 0px rgba(0, 0, 0, 0.08),
+  0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
-/* ---------------------------WORK EXAMPLES -- */
 
+/* ---------------------------WORK EXAMPLES -- */
 .examples-list {
   display: flex;
   justify-content: space-between;
@@ -405,8 +547,8 @@ padding-bottom: 100px;
   text-align: start;
   }
 
-.examples-link {
-  display: flex;
+.example-link:hover {
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .example-link-info{
