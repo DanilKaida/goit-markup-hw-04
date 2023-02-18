@@ -78,12 +78,12 @@ margin: 0 auto;
 /*----------------------------- HEADER */
 .header{
 background-color: var(--main-background-color);
+border-bottom: 1px solid var(--border-color);
 }
 
 .header-container{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
   margin-left: auto;
 }
 
@@ -155,7 +155,6 @@ margin-left: auto;
 /* -----------------------------------HERO */
 
 .hero{
-  background-color: var(--hero-footer-color);
   background-image: linear-gradient(
     rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), 
     url(../images/people-office.jpg);
@@ -381,7 +380,6 @@ fill: #f4f4fd;
 .customer-item {
   width: 168px;
   height: 88px;
-  background-color: var(--second-background-color);
   }
 
 .customer-link {
@@ -408,17 +406,13 @@ fill: #f4f4fd;
 
 .footer{
  background-color: var(--hero-footer-color);
+ padding: 100px 0px;
 }
 
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
  }
-
-.footer-info{
-padding-top: 100px;
-padding-bottom: 100px;
-}
 
 .footer-logo {
   font-family: "Raleway";
@@ -446,12 +440,9 @@ padding-bottom: 100px;
 }
 
 .footer-soc {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 130px;
   margin-left: 120px;
 }
+
 .soc-text {
   display: block;
   font-family: 'Roboto';
@@ -480,7 +471,7 @@ padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #8E8F99;
+  background-color: #434455;
 }
 .footer-soc-icon{
   fill: #f4f4fd;
@@ -547,8 +538,10 @@ padding-bottom: 100px;
   text-align: start;
   }
 
-.example-link:hover {
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+.example-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16),
+  0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .example-link-info{
